@@ -1,0 +1,16 @@
+#include<stdio.h>
+int multiplynum(int n);
+int main() 
+{
+    int n;
+    printf("Enter numbers: ");
+    scanf("%d",&n);
+    printf("Factorial of %d = %d", n, multiplynum(n));
+    return 0;
+}
+int multiplynum(int n) {
+    if (n>=1)
+        return n*multiplynum(n-1);
+    else
+        return 1;
+}
